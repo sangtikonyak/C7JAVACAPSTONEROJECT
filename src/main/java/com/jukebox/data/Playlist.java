@@ -39,4 +39,13 @@ public class Playlist {
     public void setSongList(List<Song> songList) {
         this.songList = songList;
     }
+
+    @Override
+    public String toString() {
+        return "Playlist{" +
+                "playlistName='" + playlistName + '\'' +
+                ", playlistId=" + playlistId +
+                ", songList=" + songList +
+                '}';
+    }
 }
