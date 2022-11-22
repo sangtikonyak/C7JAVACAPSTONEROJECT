@@ -21,4 +21,9 @@ public class Jukebox {
     public void setAllSong(List<Song> allSong) {
         this.allSong = allSong;
     }
+
+    public  void displayAllSong()
+    {
+
+    }
 }
