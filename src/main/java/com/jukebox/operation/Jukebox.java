@@ -26,4 +26,9 @@ public class Jukebox {
     {
 
     }
+
+    public String searchSongByArtist(String name)
+    {
+        return name;
+    }
 }
