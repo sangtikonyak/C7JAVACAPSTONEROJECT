@@ -7,5 +7,12 @@ public class Playlist {
     private int playlistId;
     private List<Song>songList;
 
+    public Playlist(String playlistName, int playlistId, List<Song> songList) {
+        this.playlistName = playlistName;
+        this.playlistId = playlistId;
+        this.songList = songList;
+    }
 
+    public Playlist() {
+    }
 }
