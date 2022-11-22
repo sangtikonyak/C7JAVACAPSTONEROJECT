@@ -13,4 +13,12 @@ public class Jukebox {
 
     public Jukebox() {
     }
+
+    public List<Song> getAllSong() {
+        return allSong;
+    }
+
+    public void setAllSong(List<Song> allSong) {
+        this.allSong = allSong;
+    }
 }
