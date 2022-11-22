@@ -54,4 +54,15 @@ public class Song {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", genre='" + genre + '\'' +
+                ", duration=" + duration +
+                ", id=" + id +
+                '}';
+    }
 }
