@@ -27,8 +27,9 @@ public class Jukebox {
 
     }
 
-    public String searchSongByArtist(String name)
+    public List<Song> searchSongByArtist(String name)
     {
-        return name;
+        List<Song> getSongByArtist=null;
+        return getSongByArtist;
     }
 }
