@@ -24,7 +24,9 @@ public class Jukebox {
 
     public  void displayAllSong()
     {
-
+        for (Song song : allSong) {
+            System.out.println(song.getTitle());
+        }
     }
 
     public List<Song> searchSongByArtist(String name)
@@ -32,4 +34,6 @@ public class Jukebox {
         List<Song> getSongByArtist=null;
         return getSongByArtist;
     }
+
+    
 }

@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="69215af4-55b1-43ff-941a-45351b9dae1c" name="Changes" comment="" />
+    <list default="true" id="69215af4-55b1-43ff-941a-45351b9dae1c" name="Changes" comment="modified returnType in SearchSongByArtist method">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/Jukebox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/Jukebox.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Hum05faOlJFx7U7BfXfFDOdu01" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,7 +36,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -31,6 +52,131 @@
       <option name="presentableId" value="Default" />
       <updated>1669143121684</updated>
     </task>
+    <task id="LOCAL-00001" summary="created Song class">
+      <created>1669143391029</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143391029</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created Song constructor">
+      <created>1669143492045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143492045</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Defined getter and setter">
+      <created>1669143535203</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143535203</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Defined toString method">
+      <created>1669143561842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143561842</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created playlist class and defined 3 attributes">
+      <created>1669143694089</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143694089</updated>
+    </task>
+    <task id="LOCAL-00006" summary="defined constructor">
+      <created>1669143774384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143774384</updated>
+    </task>
+    <task id="LOCAL-00007" summary="defined getter and setter method">
+      <created>1669143812489</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143812489</updated>
+    </task>
+    <task id="LOCAL-00008" summary="defined toString method">
+      <created>1669143866759</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143866759</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created jukebox class">
+      <created>1669143932393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669143932393</updated>
+    </task>
+    <task id="LOCAL-00010" summary="defined constructor">
+      <created>1669144015135</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144015135</updated>
+    </task>
+    <task id="LOCAL-00011" summary="defined getter and setter method">
+      <created>1669144044236</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144044236</updated>
+    </task>
+    <task id="LOCAL-00012" summary="defined displayAllSong method">
+      <created>1669144112132</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144112132</updated>
+    </task>
+    <task id="LOCAL-00013" summary="defined SearchSongByArtist">
+      <created>1669144292373</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144292373</updated>
+    </task>
+    <task id="LOCAL-00014" summary="modified returnType in SearchSongByArtist method">
+      <created>1669144431506</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144431506</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created Song class" />
+    <MESSAGE value="created Song constructor" />
+    <MESSAGE value="Defined getter and setter" />
+    <MESSAGE value="Defined toString method" />
+    <MESSAGE value="created playlist class and defined 3 attributes" />
+    <MESSAGE value="defined toString method" />
+    <MESSAGE value="created jukebox class" />
+    <MESSAGE value="defined constructor" />
+    <MESSAGE value="defined getter and setter method" />
+    <MESSAGE value="defined displayAllSong method" />
+    <MESSAGE value="defined SearchSongByArtist" />
+    <MESSAGE value="modified returnType in SearchSongByArtist method" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified returnType in SearchSongByArtist method" />
   </component>
 </project>
