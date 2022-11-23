@@ -1,5 +1,6 @@
 package com.jukebox.operation;
 
+import com.jukebox.data.Playlist;
 import com.jukebox.data.Song;
 
 import java.util.ArrayList;
@@ -53,5 +54,16 @@ public class Jukebox {
        }
        return getSongByGenre;
    }
-    
+
+   public String createPlaylist(String playlistName)
+   {
+       Playlist playlist=new Playlist();
+       if (playlistName.equals(playlist.getPlaylistName()))
+       {
+           return "PlaylistName exists";
+       }
+       else {
+           return "Playlist created";
+       }
+   }
 }
