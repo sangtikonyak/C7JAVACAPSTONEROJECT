@@ -2,6 +2,7 @@ package com.jukebox.operation;
 
 import com.jukebox.data.Song;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Jukebox {
@@ -31,9 +32,16 @@ public class Jukebox {
 
     public List<Song> searchSongByArtist(String name)
     {
-        List<Song> getSongByArtist=null;
+        List<Song> getSongByArtist=new ArrayList<>();
+        for (Song song : allSong) {
+            if(name.equals(song.getArtist()))
+            {
+                getSongByArtist.add(song);
+            }
+        }
         return getSongByArtist;
     }
+
 
     
 }
