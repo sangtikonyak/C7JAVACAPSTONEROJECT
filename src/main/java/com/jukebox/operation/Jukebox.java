@@ -42,6 +42,16 @@ public class Jukebox {
         return getSongByArtist;
     }
 
-
+   public List<Song> searchSongByGenre(String genre)
+   {
+       List<Song> getSongByGenre=new ArrayList<>();
+       for (Song song : allSong) {
+           if(genre.equals(song.getGenre()))
+           {
+               getSongByGenre.add(song);
+           }
+       }
+       return getSongByGenre;
+   }
     
 }
