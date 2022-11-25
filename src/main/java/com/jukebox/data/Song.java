@@ -4,10 +4,10 @@ public class Song {
     private String title;
     private String artist;
     private String genre;
-    private int duration;
+    private String duration;
     private int id;
 
-    public Song(String title, String artist, String genre, int duration, int id) {
+    public Song(String title, String artist, String genre, String duration, int id) {
         this.title = title;
         this.artist = artist;
         this.genre = genre;
@@ -39,11 +39,11 @@ public class Song {
         this.genre = genre;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 

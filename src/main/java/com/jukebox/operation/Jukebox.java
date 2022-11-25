@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Jukebox {
-  private List<Song> allSong;
+  private  List<Song> allSong;
 
     public Jukebox(List<Song> allSong) {
         this.allSong = allSong;
@@ -24,10 +24,12 @@ public class Jukebox {
         this.allSong = allSong;
     }
 
-    public  void displayAllSong()
+    public void displayAllSong()
     {
+        int count=0;
         for (Song song : allSong) {
-            System.out.println(song.getTitle());
+            System.out.println(count + " " +song.getTitle());
+            count++;
         }
     }
 
@@ -38,6 +40,9 @@ public class Jukebox {
             if(name.equals(song.getArtist()))
             {
                 getSongByArtist.add(song);
+            }
+            else {
+                System.out.println("Artist not found");
             }
         }
         return getSongByArtist;
@@ -51,19 +56,16 @@ public class Jukebox {
            {
                getSongByGenre.add(song);
            }
+           else {
+               System.out.println("Genre not found");
+           }
        }
        return getSongByGenre;
    }
 
    public String createPlaylist(String playlistName)
    {
-       Playlist playlist=new Playlist();
-       if (playlistName.equals(playlist.getPlaylistName()))
-       {
-           return "PlaylistName exists";
-       }
-       else {
-           return "Playlist created";
+           return playlistName;
        }
    }
-}
+

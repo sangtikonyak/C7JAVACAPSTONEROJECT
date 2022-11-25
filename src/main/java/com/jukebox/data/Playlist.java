@@ -1,5 +1,7 @@
 package com.jukebox.data;
 
+
+
 import java.util.List;
 
 public class Playlist {
@@ -39,6 +41,7 @@ public class Playlist {
     public void setSongList(List<Song> songList) {
         this.songList = songList;
     }
+
 
     @Override
     public String toString() {
