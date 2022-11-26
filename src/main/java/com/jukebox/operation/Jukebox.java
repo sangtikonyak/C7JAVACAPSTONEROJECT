@@ -29,8 +29,8 @@ public class Jukebox {
     {
         System.out.println("Id\t\t Title\t\t Artist\t\t Genre\t\t Duration");
         for (Song song : allSong) {
-            System.out.println(song.getId()+" "+song.getTitle()+" "+song.getArtist()+" "+
-                    song.getGenre()+" "+ song.getDuration());
+            System.out.println(song.getId()+"\t\t "+song.getTitle()+"\t\t "+song.getArtist()+"\t\t "+
+                    song.getGenre()+"\t\t "+ song.getDuration());
         }
     }
     public void displayFunctions()
@@ -75,12 +75,22 @@ public class Jukebox {
    {
            return playlistName;
        }
-       public void searchSong()
+       public void searchSong(String name)
        {
-           Scanner scan=new Scanner(System.in);
-           String name=scan.next();
+           String getSong="";
+           System.out.println("id\t\tTitle");
            for (Song song : allSong) {
-               
+               if (name.equals(song.getGenre()) || name.equals(song.getArtist()) ||
+                       name.equals(song.getTitle()))
+               {
+                   getSong=song.getArtist();
+                   System.out.println(song.getId()+" "+song.getTitle());
+
+               }
+           }
+           if (name.equals(""))
+           {
+               System.out.println("No Result");
            }
        }
 
