@@ -7,12 +7,17 @@ public class Song {
     private String duration;
     private int id;
 
+    private String filepath;
+
     public Song(String title, String artist, String genre, String duration, int id) {
         this.title = title;
         this.artist = artist;
         this.genre = genre;
         this.duration = duration;
         this.id = id;
+    }
+
+    public Song() {
     }
 
     public String getTitle() {
@@ -53,6 +58,14 @@ public class Song {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getFilepath() {
+        return filepath;
+    }
+
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 
     @Override
