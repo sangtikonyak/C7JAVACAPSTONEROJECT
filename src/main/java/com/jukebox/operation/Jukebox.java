@@ -5,6 +5,7 @@ import com.jukebox.data.Song;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Jukebox {
   private  List<Song> allSong;
@@ -26,46 +27,62 @@ public class Jukebox {
 
     public void displayAllSong()
     {
-        int count=0;
+        System.out.println("Id\t\t Title\t\t Artist\t\t Genre\t\t Duration");
         for (Song song : allSong) {
-            System.out.println(count + " " +song.getTitle());
-            count++;
+            System.out.println(song.getId()+" "+song.getTitle()+" "+song.getArtist()+" "+
+                    song.getGenre()+" "+ song.getDuration());
         }
     }
+    public void displayFunctions()
+    {
+        System.out.println("1.playMusic");
+        System.out.println("2.Create playlist");
+        System.out.println("3.Search For Song");
+        System.out.println("4.Show Existing Playlist");
+        System.out.println("5.Add Song To Playlist");
+        System.out.println("5.Exit");
+    }
+    
 
     public List<Song> searchSongByArtist(String name)
     {
-        List<Song> getSongByArtist=new ArrayList<>();
+        List<Song> list=new ArrayList<>();
         for (Song song : allSong) {
             if(name.equals(song.getArtist()))
             {
-                getSongByArtist.add(song);
-            }
-            else {
-                System.out.println("Artist not found");
+                list.add(song);
             }
         }
-        return getSongByArtist;
+          return list;
     }
 
-   public List<Song> searchSongByGenre(String genre)
+
+   public void searchSongByGenre(String genre)
    {
-       List<Song> getSongByGenre=new ArrayList<>();
+      String getGenre="";
+      int count=0;
        for (Song song : allSong) {
            if(genre.equals(song.getGenre()))
            {
-               getSongByGenre.add(song);
+               System.out.println(count+" "+song.getTitle());
            }
-           else {
-               System.out.println("Genre not found");
-           }
+
        }
-       return getSongByGenre;
+
    }
 
    public String createPlaylist(String playlistName)
    {
            return playlistName;
        }
+       public void searchSong()
+       {
+           Scanner scan=new Scanner(System.in);
+           String name=scan.next();
+           for (Song song : allSong) {
+               
+           }
+       }
+
    }
 
