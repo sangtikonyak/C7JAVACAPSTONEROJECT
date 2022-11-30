@@ -3,27 +3,32 @@ package com.jukebox.operation;
 import com.jukebox.dao.PlaylistDAO;
 import com.jukebox.dao.SongInPlaylistDAO;
 import com.jukebox.data.Playlist;
+import com.jukebox.data.Song;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 public class PlaylistOperations {
 
-    Playlist playlist;
     List<Playlist> playlists;
+    List<Song> list;
     Scanner scan;
-    public PlaylistOperations(List<Playlist> list,Scanner scan)
-    {
-        this.playlists=list;
-        playlist=new Playlist();
-        this.scan=scan;
+
+    public PlaylistOperations(List<Playlist> playlists, List<Song> list, Scanner scan) {
+        this.playlists = playlists;
+        this.list = list;
+        this.scan = scan;
     }
 
     public PlaylistOperations() {
     }
 
-    public void createPlaylist(String playlistName) throws SQLException {
+    public void createPlaylist(String playlistName, List<Song>playlistSongs) throws SQLException, UnsupportedAudioFileException, LineUnavailableException, IOException {
+
         boolean flag = true;
         if (playlists.isEmpty()) {
             int playlistId = PlaylistDAO.insertIntoPlaylist(playlistName);
@@ -42,11 +47,12 @@ public class PlaylistOperations {
         }
         if (flag) {
             int playlistId = PlaylistDAO.insertIntoPlaylist(playlistName);
+
             displayAddSongToPlaylist(playlistId);
-        }
+            }
+
+
     }
-
-
     public void addSongToPlaylist() throws SQLException {
         for (Playlist playlist1 : playlists) {
             System.out.println(playlist1.getPlaylistId()+" "+ playlist1.getPlaylistName());
@@ -66,27 +72,35 @@ public class PlaylistOperations {
             {
                 case 1:
                     Jukebox.displayAllSong();
+                    System.out.println("enter song id to add song");
                     int songId=scan.nextInt();
-                     List<Integer> songIdList= SongInPlaylistDAO.getSongId();
-                    if (songIdList.contains(songId))
+                    List<Song>playlist=SongInPlaylistDAO.getPlaylistSong(playlistId,list);
+                    for (Song song : playlist) {
+                        if (song.getId() == songId) {
+                            flag = false;
+                            break;
+                        }
+
+                    }
+                    if (flag)
                     {
-                        flag=false;
+                        PlaylistDAO.addSongToPlaylist(playlistId,songId);
                     }
-                    if (flag) {
-                        PlaylistDAO.addSongToPlaylist(playlistId, songId);
-                    }
-                    else {
-                        System.out.println("song already added");
+                    else
+                    {
+                        System.out.println("Song already exist in playlist");
                     }
                     break;
                 case 2:
                     break;
             }
+
             if (choice==2)
             {
                 break;
             }
         }
+
     }
 
 
