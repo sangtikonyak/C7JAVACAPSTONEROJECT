@@ -18,7 +18,7 @@ public class SongDAO {
         Connection connection= Database.getConnection();
         try {
             Statement statement = connection.createStatement();
-            String query="SELECT * FROM SONG";
+               String query="SELECT * FROM SONG";
             ResultSet resultSet=statement.executeQuery(query);
             while(resultSet.next())
             {

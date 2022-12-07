@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69215af4-55b1-43ff-941a-45351b9dae1c" name="Changes" comment="implemented getListOfSong Method">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/PlaylistDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/SongDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/SongInPlaylistDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/PlaylistOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/SongInPlaylistOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/SongOperations.java" afterDir="false" />
+    <list default="true" id="69215af4-55b1-43ff-941a-45351b9dae1c" name="Changes" comment="modified displayAddSongToPlaylist Method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/exception/Error.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Eminem - mockingbird.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Eminem - venom.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Joji - die for you.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Wallows - are you bored yet.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jukebox/dao/PlaylistDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jukebox/dao/SongDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jukebox/dao/SongInPlaylistDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jukebox/operation/JukeboxTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/jukebox/operation/PlaylistOperationsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/JukeboxImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/implementation/JukeboxImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/PlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/SongDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/SongDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/SongInPlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/dao/SongInPlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/data/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/data/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/implementation/JukeboxImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/implementation/JukeboxImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/Jukebox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/Jukebox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jukebox/data/SongTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/PlaylistOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/PlaylistOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/SongInPlaylistOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/SongInPlaylistOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/SongOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jukebox/operation/SongOperations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -47,6 +56,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -62,23 +72,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.jukebox.operation" />
+      <recent name="com.jukebox.dao" />
       <recent name="com.jukebox.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Database">
-    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jukebox.util.Database" />
-      <module name="C7JAVACAPSTONEROJECT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jukebox.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.JukeboxImpl">
     <configuration name="JukeboxImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jukebox.implementation.JukeboxImpl" />
       <module name="C7JAVACAPSTONEROJECT" />
@@ -92,32 +91,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JukeboxTest.searchSong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="C7JAVACAPSTONEROJECT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jukebox.data.*" />
+          <option name="PATTERN" value="com.jukebox.operation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jukebox.data" />
-      <option name="MAIN_CLASS_NAME" value="com.jukebox.data.SongTest" />
+      <option name="PACKAGE_NAME" value="com.jukebox.operation" />
+      <option name="MAIN_CLASS_NAME" value="com.jukebox.operation.JukeboxTest" />
+      <option name="METHOD_NAME" value="searchSong" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistOperationsTest.createPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="C7JAVACAPSTONEROJECT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jukebox.operation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jukebox.operation" />
+      <option name="MAIN_CLASS_NAME" value="com.jukebox.operation.PlaylistOperationsTest" />
+      <option name="METHOD_NAME" value="createPlaylist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongInPlaylistDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="C7JAVACAPSTONEROJECT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jukebox.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jukebox.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.jukebox.dao.SongInPlaylistDAOTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongTest.returnAllSongListByArtist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SongInPlaylistDAOTest.getPlaylistSong1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="C7JAVACAPSTONEROJECT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jukebox.data.*" />
+          <option name="PATTERN" value="com.jukebox.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.jukebox.data" />
-      <option name="MAIN_CLASS_NAME" value="com.jukebox.data.SongTest" />
-      <option name="METHOD_NAME" value="returnAllSongListByArtist" />
+      <option name="PACKAGE_NAME" value="com.jukebox.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.jukebox.dao.SongInPlaylistDAOTest" />
+      <option name="METHOD_NAME" value="getPlaylistSong1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,10 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Database" />
         <item itemvalue="Application.JukeboxImpl" />
-        <item itemvalue="JUnit.SongTest" />
-        <item itemvalue="JUnit.SongTest.returnAllSongListByArtist" />
+        <item itemvalue="JUnit.JukeboxTest.searchSong" />
+        <item itemvalue="JUnit.PlaylistOperationsTest.createPlaylist" />
+        <item itemvalue="JUnit.SongInPlaylistDAOTest.getPlaylistSong1" />
+        <item itemvalue="JUnit.SongInPlaylistDAOTest" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +327,56 @@
       <option name="project" value="LOCAL" />
       <updated>1669474059149</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="implemented playSong Method">
+      <created>1669475281941</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669475281941</updated>
+    </task>
+    <task id="LOCAL-00024" summary="implemented case">
+      <created>1669649047778</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669649047778</updated>
+    </task>
+    <task id="LOCAL-00025" summary="implemented switch case 4 and 7">
+      <created>1669649107631</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669649107631</updated>
+    </task>
+    <task id="LOCAL-00026" summary="getSongMethod and its definition added">
+      <created>1669746695485</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669746695485</updated>
+    </task>
+    <task id="LOCAL-00027" summary="created createPlaylist,addSongToPlaylist,displayAddSongToMethod and their definition added">
+      <created>1669746842971</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669746842971</updated>
+    </task>
+    <task id="LOCAL-00028" summary="implemented switch case 3 and 6">
+      <created>1669746907659</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669746907659</updated>
+    </task>
+    <task id="LOCAL-00029" summary="modified displayAddSongToPlaylist Method">
+      <created>1669801842900</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669801842900</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,7 +391,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created Song class" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="created Song constructor" />
     <MESSAGE value="Defined getter and setter" />
     <MESSAGE value="Defined toString method" />
@@ -329,6 +410,32 @@
     <MESSAGE value="implemented displayFunctions Method" />
     <MESSAGE value="implemented getConnection Method" />
     <MESSAGE value="implemented getListOfSong Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented getListOfSong Method" />
+    <MESSAGE value="implemented playSong Method" />
+    <MESSAGE value="searchSong method definition added" />
+    <MESSAGE value="implemented switch case 4 and 7" />
+    <MESSAGE value="getSongMethod and its definition added" />
+    <MESSAGE value="created createPlaylist,addSongToPlaylist,displayAddSongToMethod and their definition added" />
+    <MESSAGE value="implemented switch case 3 and 6" />
+    <MESSAGE value="modified displayAddSongToPlaylist Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified displayAddSongToPlaylist Method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.Error" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/jukebox/dao/SongDAOTest.java</url>
+          <line>18</line>
+          <properties class="com.jukebox.dao.SongDAOTest" method="listOfSong">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

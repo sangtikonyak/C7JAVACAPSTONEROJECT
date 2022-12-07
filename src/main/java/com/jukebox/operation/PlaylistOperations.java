@@ -27,14 +27,15 @@ public class PlaylistOperations {
     public PlaylistOperations() {
     }
 
-    public void createPlaylist(String playlistName, List<Song>playlistSongs) throws SQLException, UnsupportedAudioFileException, LineUnavailableException, IOException {
-
+    public int createPlaylist(String playlistName) throws SQLException, UnsupportedAudioFileException, LineUnavailableException, IOException {
         boolean flag = true;
+        int playlistId = 0;
         if (playlists.isEmpty()) {
-            int playlistId = PlaylistDAO.insertIntoPlaylist(playlistName);
+             playlistId = PlaylistDAO.insertIntoPlaylist(playlistName);
             displayAddSongToPlaylist(playlistId);
-
+            flag=false;
         }
+
         if (!playlists.isEmpty()) {
             for (Playlist playlist1 : playlists) {
                 if (playlistName.equals(playlist1.getPlaylistName())) {
@@ -42,25 +43,35 @@ public class PlaylistOperations {
                     flag = false;
                     break;
                 }
+                else {
+                    flag=true;
+                }
+
             }
 
         }
         if (flag) {
-            int playlistId = PlaylistDAO.insertIntoPlaylist(playlistName);
 
+             playlistId = PlaylistDAO.insertIntoPlaylist(playlistName);
             displayAddSongToPlaylist(playlistId);
             }
 
-
+return playlistId;
     }
+
     public void addSongToPlaylist() throws SQLException {
-        for (Playlist playlist1 : playlists) {
-            System.out.println(playlist1.getPlaylistId()+" "+ playlist1.getPlaylistName());
-        }
+        displayPlaylist();
         System.out.println("Enter playlist Id ");
         int playlistId=scan.nextInt();
         displayAddSongToPlaylist(playlistId);
     }
+
+    public void displayPlaylist() {
+        for (Playlist playlist1 : playlists) {
+            System.out.println(playlist1.getPlaylistId()+" "+ playlist1.getPlaylistName());
+        }
+    }
+
     private void displayAddSongToPlaylist(int playlistId) throws SQLException {
         boolean flag=true;
         while (true)
@@ -76,9 +87,13 @@ public class PlaylistOperations {
                     int songId=scan.nextInt();
                     List<Song>playlist=SongInPlaylistDAO.getPlaylistSong(playlistId,list);
                     for (Song song : playlist) {
+
                         if (song.getId() == songId) {
                             flag = false;
                             break;
+                        }
+                        else {
+                            flag=true;
                         }
 
                     }
@@ -92,6 +107,10 @@ public class PlaylistOperations {
                     }
                     break;
                 case 2:
+                    System.out.println("exiting");
+                    break;
+                default:
+                    System.err.println("invalid choice");
                     break;
             }
 

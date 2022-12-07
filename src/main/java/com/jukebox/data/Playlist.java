@@ -11,7 +11,7 @@ public class Playlist {
 
     public Playlist(String playlistName, int playlistId, List<Song> songList) {
         this.playlistName = playlistName;
-        this.playlistId = playlistId;
+       // this.playlistId = playlistId;
         this.songList = songList;
     }
 

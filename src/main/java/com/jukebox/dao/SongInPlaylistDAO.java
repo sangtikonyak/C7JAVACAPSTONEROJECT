@@ -14,22 +14,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SongInPlaylistDAO {
-public static List<Integer> getSongId() throws SQLException {
-    List<Integer> integerList=new ArrayList<>();
-    Connection connection= Database.getConnection();
-    Statement statement=connection.createStatement();
-    String query="SELECT SONG_ID FROM SONGINPLAYLIST";
-    ResultSet resultSet= statement.executeQuery(query);
-    while (resultSet.next())
-    {
-        integerList.add(resultSet.getInt(1));
-    }
-    return integerList;
-}
-public List<Song> getPlaylistSong(int playlistId)
-{
+public static List<Song> getPlaylistSong(int playlistId,List<Song>songs) throws SQLException {
     List<Song> getPlaylistSong=new ArrayList<>();
+    Connection connection=Database.getConnection();
+    Statement statement= connection.createStatement();
+    String query="SELECT SONG_ID FROM SONGINPLAYLIST WHERE PLAYLIST_ID="+playlistId+"";
+    ResultSet resultSet=statement.executeQuery(query);
+    while(resultSet.next())
+    {
+        for (Song song : songs) {
+          if(resultSet.getInt(1)==song.getId())
+          {
+              getPlaylistSong.add(song);
+          }
+        }
+    }
 
     return getPlaylistSong;
 }
+
+
 }
